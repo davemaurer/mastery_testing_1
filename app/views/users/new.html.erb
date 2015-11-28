@@ -9,5 +9,9 @@
   <%= f.password_field :password, placeholder: "Choose a Password" %>
   <br>
   <br>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, placeholder: "Retype Password" %>
+  <br>
+  <br>
   <%= f.submit "Sign Up" %>
 <% end %>

@@ -1,7 +1,7 @@
 <h1>This...is...Spinboard! (Kicks user into a bottomless pit)</h1>
 
 <% if current_user %>
-  Hello, <%= current_user.name %>
+  Hello, <%= current_user.email %> | <%= link_to "Logout", logout_path %>
 <% else %>
   Not at user yet? Would you like to sign up? <%= link_to "Yes Please", new_user_path %>
   <br>
