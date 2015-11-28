@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "Wonderful! Now you are in our database forever!"
-      redirect_to root_path
+      redirect_to links_path
     else
       flash[:alert] = "Uhoh, somthing went wrong. Please try again."
       render :new
