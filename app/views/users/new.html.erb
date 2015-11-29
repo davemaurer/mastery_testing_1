@@ -1,17 +1,18 @@
-<h1>New User! Wohoo!</h1>
-<br>
-<%= form_for(@user) do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email, placeholder: "Email Address" %>
-  <br>
-  <br>
-  <%= f.label :password %>
-  <%= f.password_field :password, placeholder: "Choose a Password" %>
-  <br>
-  <br>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, placeholder: "Retype Password" %>
-  <br>
-  <br>
-  <%= f.submit "Sign Up" %>
-<% end %>
+<div class="row">
+  <div class="large-6 large-centered columns">
+    <h1>New User! Wohoo!</h1>
+    <div class="card"><%= form_for(@user) do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email, placeholder: "Email Address" %>
+      <br>
+      <%= f.label :password %>
+      <%= f.password_field :password, placeholder: "Choose a Password" %>
+      <br>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, placeholder: "Retype Password" %>
+      <br>
+      <%= f.submit "Sign Up", class: "button round small info" %>
+    <% end %>
+    </div>
+  </div>
+</div>

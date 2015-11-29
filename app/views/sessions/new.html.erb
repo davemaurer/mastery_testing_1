@@ -1,13 +1,16 @@
-<h1>Login...it's fun!</h1>
-
-<%= form_for(:session, url: login_path) do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email, placeholder: "Email Address" %>
-  <br>
-  <br>
-  <%= f.label :password %>
-  <%= f.password_field :password, placeholder: "Your Password" %>
-  <br>
-  <br>
-  <%= f.submit "Log In" %>
-<% end %>
+<div class="row">
+  <div class="large-6 large-centered columns">
+  <h1>Login...it's fun!</h1>
+    <div class="card">
+    <%= form_for(:session, url: login_path) do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email, placeholder: "Email Address" %>
+      <br>
+      <%= f.label :password %>
+      <%= f.password_field :password, placeholder: "Your Password" %>
+      <br>
+      <%= f.submit "Log In", class: "button round small info" %>
+    <% end %>
+    </div>
+  </div>
+</div>
