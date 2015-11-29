@@ -24,7 +24,10 @@
     <h2>Your Links</h2>
     <% @links.each do |link| %>
       <ul class="no-bullet">
-        <h4><%= link.title %> | <%= link.read %> | <%= link_to link.url, link.url %>
+        <h4><%= link.title %> | <%= link.state %> |
+            <%= link_to "Mark As Read", read_path(link), method: :put, class: "button round tiny" %> |
+            <%= link_to "Mark As Unread", unread_path(link), method: :put, class: "button round tiny danger" %> |
+            <%= link_to link.url, link.url %> |
         </h4>
       </ul>
   <% end %>
